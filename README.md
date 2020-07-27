@@ -54,7 +54,7 @@ mLineItem.Quantity = (int)numQuantity.Value;
 mLineItem.Name = "Test Line Item";
 mLineItem.Currency = "GBP";
 BankedLineItem[] mLineItems = new BankedLineItem[] { mLineItem };
-BankedPaymentSession mSession = new BankedPaymentSession(mSuccessUrl, mErrorUrl, mLineItems, mPayee, "test-reference", mPayer);
+BankedPaymentSession mSession = new BankedPaymentSession(mSuccessUrl, mErrorUrl, mLineItems, mPayee, "test-reference", mPayer, true);
 BankedPaymentSession mNewSession = mAPI.CreatePaymentSession(mSession);
 System.Diagnostics.Debug.WriteLine(mNewSession.Id);
 ```
